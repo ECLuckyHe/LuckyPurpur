@@ -1,0 +1,21 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Lucky_He <673230244@qq.com>
+Date: Wed, 15 Nov 2023 23:40:06 +0800
+Subject: [PATCH] Make-anvil-repair-cost-unlimited
+
+
+diff --git a/src/main/java/net/minecraft/world/inventory/AnvilMenu.java b/src/main/java/net/minecraft/world/inventory/AnvilMenu.java
+index 27d76e0c4809d333c548379bf78ec2db083b027e..ca636c883bdc7b9399bfa3fdca6facda2e363009 100644
+--- a/src/main/java/net/minecraft/world/inventory/AnvilMenu.java
++++ b/src/main/java/net/minecraft/world/inventory/AnvilMenu.java
+@@ -55,7 +55,9 @@ public class AnvilMenu extends ItemCombinerMenu {
+     private static final int SLOT_Y_PLACEMENT = 47;
+     // CraftBukkit start
+     public static final int DEFAULT_DENIED_COST = -1;
+-    public int maximumRepairCost = 40;
++    // LuckyPurpur start
++    public int maximumRepairCost = Integer.MAX_VALUE;
++    // LuckyPurpur end
+     private CraftInventoryView bukkitEntity;
+     // CraftBukkit end
+     public boolean bypassCost = false; // Purpur
